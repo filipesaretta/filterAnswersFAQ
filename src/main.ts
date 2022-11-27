@@ -9,7 +9,7 @@ function getFilteredCards(e: Event) {
   if (target.value) {
     cards.forEach(card => {
       const title = card.querySelector('h2')?.textContent?.toLowerCase();
-      const searchedText = target.value;
+      const searchedText = target.value.toLowerCase();
 
       if (!title?.includes(searchedText)) {
         card.style.display = 'none';
